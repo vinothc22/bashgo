@@ -1,0 +1,14 @@
+@media only screen and (max-width:950px) {
+    iframe {
+        height: 830px;
+    }
+}
+.google-map {
+    transition: none;
+    box-shadow:0 0 10px rgba(0,0,0,0.5);
+    transform: none;
+    a { display: block;
+        img { margin: 0 auto; }
+        &:before, &:after { display: none; }
+    }
+}

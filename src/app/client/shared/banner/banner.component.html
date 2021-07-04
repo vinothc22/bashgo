@@ -1,0 +1,36 @@
+<section class="banner-content">
+  <div *ngIf="bannerImage; else slideShow">
+    <div class="slide">
+      <figure>
+        <img src="assets/images/banner-images/{{bannerImage}}" width="1155" height="475" />
+        <figcaption *ngIf="bannerCaption.length !== 0">
+          <div class="caption">
+            <p [innerHTML]="bannerCaption"></p>
+          </div>
+        </figcaption>
+      </figure>
+
+    </div>
+  </div>
+  <ng-template #slideShow>
+    <div [@slideAnimation]="currentIndex" class="sliders" [ngStyle]="{'height': sliderHeight + 'px'}">
+      <ng-template ngFor [ngForOf]="bannerSlides" let-slide let-i="index">
+        <div class="slider" *ngIf="isCurrentSlideIndex(i)" (swiperight)="nextSlide()" (swipeleft)="prevSlide()"
+          #sliders>
+          <figure>
+            <img src="assets/images/slider-images/{{slide.url}}" width="1155" height="475" />
+            <figcaption *ngIf="slide.caption.length > 0">
+              <div class="caption">
+                <p [innerHTML]="slide.caption"></p>
+              </div>
+            </figcaption>
+          </figure>
+        </div>
+      </ng-template>
+    </div>
+    <div class="navigation">
+      <button class="navi prev-navi" (click)="prevSlide()">previous</button>
+      <button class="navi next-navi" (click)="nextSlide()">next</button>
+    </div>
+  </ng-template>
+</section>

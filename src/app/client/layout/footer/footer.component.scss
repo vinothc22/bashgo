@@ -1,0 +1,16 @@
+@import '../../../../theme/variable';
+
+.footer-content {
+    background: $java-blue-color; color:$white;
+    .copyrights { border-top:1px $white solid;
+        .content-wrapper { padding-top: 10px; padding-bottom: 10px;}
+    }
+    .header-title { text-transform: uppercase; font-weight: 600; margin-bottom: 30px; }
+    a { color:$white; text-decoration: none; font-weight: 300;
+        &:after { background:$white; }
+    }
+    .footer-logo { max-width: 135px; height: 94px; display: inline-block; text-decoration: none;
+        &:after { display: none; }
+        img { max-width: 100%; height: auto; display: block; }
+    }
+}

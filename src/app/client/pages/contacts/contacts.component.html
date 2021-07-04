@@ -1,0 +1,101 @@
+<bashgo-banner bannerImage="{{bannerImage}}" bannerCaption=""></bashgo-banner>
+<div class="page-content">
+  <section class="block-content">
+    <div class="content-wrapper" id="contactUs">
+      <h2 class="header-title"><span>Contact Us</span></h2>
+      <span>{{responseMessage}}</span>
+      <p>Kindly fill the details in the below form. We will reply back to you shortly.</p>
+      <div class="row-separator">
+        <div class="col-xs-12 col-sm-6 col-md-6">
+          <!-- <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+              <label for="">Name <span class="required">*</span></label>
+              <input type="text" class="form-control" formControlName="name"
+                [ngClass]="{'is-invalid': f.name.touched && f.name.errors}" />
+              <div *ngIf="f.name.touched && f.name.errors" class="invalid-feedback">
+                <div *ngIf="f.name.errors.required">Name is required</div>
+                <div *ngIf="f.name.errors.pattern">Invalid characters</div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="">Designation <span class="required">*</span></label>
+              <input type="text" class="form-control" formControlName="designation"
+                [ngClass]="{'is-invalid': f.designation.touched && f.designation.errors}" />
+              <div *ngIf="f.designation.touched && f.designation.errors" class="invalid-feedback">
+                <div *ngIf="f.designation.errors.required">Designation is required</div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="">Company <span class="required">*</span></label>
+              <input type="text" class="form-control" formControlName="company"
+                [ngClass]="{'is-invalid': f.company.touched && f.company.errors}" />
+              <div *ngIf="f.company.touched && f.company.errors" class="invalid-feedback">
+                <div *ngIf="f.company.errors.required">Company is required</div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="">Industry</label>
+              <input type="text" class="form-control" formControlName="industry" />
+            </div>
+            <div class="form-group">
+              <label for="">Contact No <span class="required">*</span></label>
+              <input type="number" class="form-control" formControlName="contactNo"
+                [ngClass]="{'is-invalid': f.contactNo.touched && f.contactNo.errors}" />
+              <div *ngIf="f.contactNo.touched && f.contactNo.errors" class="invalid-feedback">
+                <div *ngIf="f.contactNo.errors.required">Contact no is required</div>
+                <div *ngIf="f.contactNo.errors.pattern">Contact no is not valid</div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="">Email <span class="required">*</span></label>
+              <input type="email" class="form-control" formControlName="email"
+                [ngClass]="{'is-invalid': f.email.touched && f.email.errors}" />
+              <div *ngIf="f.email.touched && f.email.errors" class="invalid-feedback">
+                <div *ngIf="f.email.errors.required">Eamil is required</div>
+                <div *ngIf="f.email.errors.pattern">Email is not valid</div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="">Country <span class="required">*</span></label>
+              <input type="text" class="form-control" formControlName="country"
+                [ngClass]="{'is-invalid': f.country.touched && f.country.errors}" />
+              <div *ngIf="f.country.touched && f.country.errors" class="invalid-feedback">
+                <div *ngIf="f.country.errors.required">Country is required</div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="">Contents <span class="required">*</span></label>
+              <input type="text" class="form-control" formControlName="contents"
+                [ngClass]="{'is-invalid': f.contents.touched && f.contents.errors}" />
+              <div *ngIf="f.contents.touched && f.contents.errors" class="invalid-feedback">
+                <div *ngIf="f.contents.errors.required">Contents is required</div>
+              </div>
+            </div>
+            <div class="form-group form-footer">
+              <p>* These fields are mandatory</p>
+              <button class="btn btn-primary" [disabled]="contactForm.invalid">Submit</button>
+              <button class="btn btn-secondary" type="button" (click)="onClear()">Clear</button>
+            </div>
+          </form> -->
+          <iframe src="http://www.bashgo.com:8003/Contact" width="99%" height="860px" frameborder="0" allowfullscreen=""
+            aria-hidden="false" tabindex="0"></iframe>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-6">
+          <figure class="google-map">
+            <a (click)="openLightBox(1)"><img src="assets/images/map.jpg" width="100%" height="auto" alt="Bashgo" /></a>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="custom-lightbox-root" [class.lightbox-active]="isLighBoxOpen">
+  <div class="custom-lightbox-overlay"></div>
+  <div class="custom-lightbox-container">
+    <div class="close-lightbox"><a class="icon-close" (click)="isLighBoxOpen = !isLighBoxOpen">&times;</a></div>
+    <figure @fade>
+      <img src="assets/images/map-large.jpg" alt="Goole map" width="100%" height="100%" />
+    </figure>
+  </div>
+
+</div>

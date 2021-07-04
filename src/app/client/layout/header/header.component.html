@@ -1,0 +1,38 @@
+<header id="app-header" [ngClass]="isSticky ? 'sticky' : ''" class="header-content clearfix">
+  <div class="header-wrapper">
+    <div class="flex-row">
+      <div class="logo">
+        <a href="/"><img src="assets/images/bashgo-logo.jpg" width="100%" height="100%" alt="Bashgo" /></a>
+      </div>
+      <div class="uitility-content">
+        <span><i class="icon icon-phone"></i>+91 44 26631751 / 52</span>
+        <span><i class="icon icon-mail"></i><a href="mailto:contact@bashgo.com">contact@bashgo.com</a></span>
+        <span><button class="btn get-quote" (click)="getQuote()" routerLinkActive="active">Get a
+            Quote</button></span>
+      </div>
+    </div>
+    <nav>
+      <div class="responsive-menu">
+        <a class="icon-menu" #toggleButton (click)="toggleResponsiveMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </a>
+      </div>
+      <ul class="navi-content {{setToggleMenu ? 'active-menu' : ''}}" #menu>
+        <li *ngFor="let menu of menuList"><a [routerLink]="'/'+menu.linkTo" (click)="setToggleMenu = !setToggleMenu"
+            routerLinkActive="active"><span>{{menu.text}}</span></a>
+          <ul class="sub-menu" *ngIf="menu.subMenu">
+            <li *ngFor="let sm of menu.subMenu"><a [routerLink]="'/'+menu.linkTo+'/'+sm.linkTo"
+                routerLinkActive="active"><span>{{sm.text}}</span></a></li>
+          </ul>
+        </li>
+      </ul>
+      <!--<div class="top-search-bar">
+        <input type="text" value="" placeholder="Search" class="search-txt-fld" />
+        <button class="icon-search"></button>
+      </div>-->
+    </nav>
+  </div>
+
+</header>

@@ -1,0 +1,18 @@
+@import '../../../../theme/variable';
+
+.gallery {
+  display: flex; flex-wrap: wrap; justify-content: center;
+  li { width: 250px; height: 190px; margin: 0 10px 10px 0; }
+  figure { transform: none;
+    a { display: block; }
+    img { margin:0; }
+  }
+}
+
+@media screen {
+  @media (max-width: 767px) {
+    .gallery {
+      li { margin: 0 auto 10px; }
+     }
+  }
+}

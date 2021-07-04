@@ -1,0 +1,22 @@
+<bashgo-banner bannerImage="{{bannerImage}}" bannerCaption=""></bashgo-banner>
+<section class="page-content">
+  <section class="block-content">
+    <div class="content-wrapper">
+      <h2 class="header-title"><span>Clientele</span></h2>
+      <p>Our clients across the world have achieved significant business results. We have the privilege of working with
+        some of the most well know companies in the world and we don’t take this lightly. We work both diligently and
+        intelligently to ensure that the needs of our clients come first.</p>
+    </div>
+  </section>
+  <section class="block-content">
+    <div class="content-wrapper">
+      <ng-container *ngFor="let client of clients">
+        <h3 class="header-title"><span>{{client.clientLoc}}</span></h3>
+        <ul class="list-item">
+          <li *ngFor="let c of client.clientNames"><span class="icon-list"></span>{{c.clientName}}</li>
+        </ul>
+      </ng-container>
+
+    </div>
+  </section>
+</section>

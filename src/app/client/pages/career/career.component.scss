@@ -1,0 +1,31 @@
+.data-table { font-size: 14px; line-height: 20px;
+    th, td { min-width: 80px; width: 80px;max-width: 80px; vertical-align: top; padding: 5px;
+        &:first-of-type { width: 30px; min-width: 30px; max-width: 30px; }
+        &.job-code { width: 70px; min-width: 70px; max-width: 70px; }
+        &.job-title, &.job.edu { width: 200px; min-width: 200px; max-width: 200px; }
+        &.job-desc{
+            width: 450px; min-width:450px; max-width: 450px;
+        }
+    }
+    li {
+        position: relative;
+        padding-left: 10px;
+    }
+}
+
+
+@media only screen and (max-width:950px) {
+    iframe {
+        height: 630px;
+    }
+}
+@media only screen and (max-width:767px) {
+    .table-container {
+        overflow: hidden;
+        overflow-x: auto;
+        width: 100%;
+    }
+    iframe {
+        height: 630px;
+    }
+}

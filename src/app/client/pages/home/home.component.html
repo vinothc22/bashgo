@@ -1,0 +1,138 @@
+<bashgo-banner [slideImages]="sliderImages"></bashgo-banner>
+<div class="page-content">
+  <section class="block-content">
+    <div class="content-wrapper">
+      <h2 class="header-title"><span>Welcome to BASHGO</span></h2>
+      <p>BASHGO Maintenance Services Pvt Ltd was formed in 2004 as a small company specialising in Operation &
+        Maintenance works for process industries in the area of Mechanical, Electrical and Instrumentation. Since that
+        time, the company has grown into a medium sized contractor providing specialist services in all areas of utility
+        infrastructure installation, operation and maintenance, Overhauling, Erection & Commissioning, etc.,. The
+        company has a strong portfolio of clients including many process industries for which it has successfully
+        rendering and completed contracts.</p>
+    </div>
+  </section>
+  <section class="block-content">
+    <div class="maintenance-services">
+      <div class="content-wrapper">
+        <h2 class="header-title"><span>Management &amp; Services</span></h2>
+        <div class="row-separator">
+          <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3" *ngFor="let s of serviceManagements; let even = even;">
+            <div class="box with-header-icon" [ngClass]="{'box-green': even }">
+              <div class="box-header-icon">
+                <span class="icon icon-{{s.icon}}"></span>
+              </div>
+              <h3 class="header-title"><span>{{s.title}}</span></h3>
+              <p>{{s.description | truncate:50:true}}</p>
+              <button class="btn btn-secondary" [routerLink]="'/services/'+s.linkTo"
+                routerLinkActive="active"><span>Read
+                  more</span><i>&raquo;</i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="block-content">
+    <div class="content-wrapper">
+      <h2 class="header-title"><span>Our Services</span></h2>
+      <div class="row-separator">
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+          <div class="box box-grey no-flex">
+            <ul class="list-item">
+              <li><span class="icon-list"></span>Annual Maintenance</li>
+              <li><span class="icon-list"></span>Utility Maintenance</li>
+              <li><span class="icon-list"></span>Turnaround Maintenance</li>
+              <li><span class="icon-list"></span>Equipment Overhauling</li>
+              <li><span class="icon-list"></span>Fabrication & Erection (Pipe / Structural)</li>
+              <li><span class="icon-list"></span>Workshop O&M</li>
+              <li><span class="icon-list"></span>Shutdown Maintenance</li>
+              <li><span class="icon-list"></span>Condition Monitoring Service</li>
+              <li><span class="icon-list"></span>Electrical Maintenance</li>
+              <li><span class="icon-list"></span>HVAC</li>
+              <li><span class="icon-list"></span>ETP / STP O&M</li>
+              <li><span class="icon-list"></span>EOT Crane Maintenance</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+          <div class="box box-grey no-flex">
+            <ul class="list-item">
+              <li><span class="icon-list"></span>Solar Plant Erection & Commissioning</li>
+              <li><span class="icon-list"></span>Project Management Services</li>
+              <li><span class="icon-list"></span>Material Coding & Cataloguing</li>
+              <li><span class="icon-list"></span>Master Data Management</li>
+              <li><span class="icon-list"></span>Inventory Control</li>
+              <li><span class="icon-list"></span>Bill of Material (BOM)</li>
+              <li><span class="icon-list"></span>Service Master Preparation</li>
+              <li><span class="icon-list"></span>Physical Stock Verification</li>
+              <li><span class="icon-list"></span>SMP / SOP Preparation</li>
+              <li><span class="icon-list"></span>Process Equipment Training</li>
+              <li><span class="icon-list"></span>Technical Manpower Support</li>
+              <li><span class="icon-list"></span>Manpower Outsourcing</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="block-content">
+    <div class="content-wrapper">
+      <h2 class="header-title"><span>Our Sectors</span></h2>
+      <div class="row-separator">
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+          <div class="box box-grey no-flex">
+            <ul class="list-item">
+              <li><span class="icon-list"></span>Automotive</li>
+              <li><span class="icon-list"></span>Cement</li>
+              <li><span class="icon-list"></span>Engineering</li>
+              <li><span class="icon-list"></span>Healthcare</li>
+              <li><span class="icon-list"></span>Manufacturing</li>
+              <li><span class="icon-list"></span>Metallurgical</li>
+              <li><span class="icon-list"></span>Oil & Gas</li>
+              <li><span class="icon-list"></span>Paper</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+          <div class="box box-grey no-flex">
+            <ul class="list-item">
+              <li><span class="icon-list"></span>Pharmaceutical</li>
+              <li><span class="icon-list"></span>Power</li>
+              <li><span class="icon-list"></span>Printing</li>
+              <li><span class="icon-list"></span>Refinery</li>
+              <li><span class="icon-list"></span>Renewable Energy</li>
+              <li><span class="icon-list"></span>Shipping</li>
+              <li><span class="icon-list"></span>Steel</li>
+              <li><span class="icon-list"></span>Telecommunication</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="block-content">
+    <div class="content-wrapper">
+      <h2 class="header-title"><span>Why trust BASHGO</span></h2>
+      <p>As the trusted O&M services provider, with an extensive combination of heritage, expertise and all important
+        health, safety and engineering credentials, no other company is better positioned to support you in delivering
+        your project than BASHGO. We’re happy to share our expert knowledge whenever need arises.You can be 100%
+        confident in our capability to support you throughout your requirements.</p>
+      <ul class="list-item-flex flex-col-2">
+        <li>End-to-end delivery through a single brand</li>
+        <li>Projects of any scale</li>
+        <li>We deliver on time and on budget</li>
+        <li>Multi-utility solutions</li>
+        <li>Asset ownership ability</li>
+        <li>Staff expertise drawn from our business heritage</li>
+        <li>Always delivering a safe, right first time service</li>
+        <li>Our commitment to customer service excellence</li>
+      </ul>
+    </div>
+  </section>
+  <section class="block-content">
+    <div class="content-wrapper">
+      <h2 class="header-title"><span>Our Clients</span></h2>
+      <bashgo-clients></bashgo-clients>
+    </div>
+  </section>
+</div>

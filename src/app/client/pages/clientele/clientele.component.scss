@@ -1,0 +1,10 @@
+.our-clients { display: flex; flex-wrap: wrap; align-items: center;
+  li { margin: 10px; }
+  figure { background: none; margin: 0; padding: 0px; display: flex; justify-content: center; align-items: center; border: 0;
+    img { margin:0; }
+  }
+  a:after { display: none; }
+}
+.list-item {
+  margin-bottom: 20px;
+}

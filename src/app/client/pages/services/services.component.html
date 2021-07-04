@@ -1,0 +1,21 @@
+<bashgo-banner [slideImages]="sliderImages"></bashgo-banner>
+<div class="page-content">
+  <section class="block-content">
+    <div class="maintenance-services">
+      <div class="content-wrapper">
+        <h2 class="header-title"><span>Management &amp; Services</span></h2>
+        <div class="row-separator">
+          <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3" *ngFor="let s of serviceManagements">
+            <div class="box">
+              <h3 class="header-title"><span>{{s.title}}</span></h3>
+              <p>{{s.description | truncate:100:true}}</p>
+              <button class="btn btn-secondary" [routerLink]="'/services/'+s.linkTo"
+                routerLinkActive="active"><span>Read
+                  more</span><i>&raquo;</i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

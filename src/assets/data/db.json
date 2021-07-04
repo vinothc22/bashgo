@@ -1,0 +1,24 @@
+{
+    "currentVacancy": [
+        {
+            "id": 1,
+            "JobID": 1,
+            "JobCode": "job1",
+            "Title": "test1",
+            "Qualification": "test1",
+            "Experience": "test1",
+            "Description": "test1",
+            "IsActive": true
+        },
+        {
+            "id": 2,
+            "JobID": 2,
+            "JobCode": "job2",
+            "Title": "test2",
+            "Qualification": "test2",
+            "Experience": "test2",
+            "Description": "test2",
+            "IsActive": true
+        }
+    ]
+}

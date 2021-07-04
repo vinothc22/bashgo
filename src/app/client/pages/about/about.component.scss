@@ -1,0 +1,22 @@
+@import '../../../../theme/variable';
+
+.key-personnel { line-height: 24px;
+  .cols { display: flex; margin: 0px 0px 30px; align-items: center; }
+  figure { background: none; margin:0; padding: 0; max-width: 250px; max-height: 250px; border-radius: 100%; margin-bottom: 20px; overflow: hidden; border: 3px $sky-blue-color solid;
+    &:hover { box-shadow: none; transform: none;
+      img { transform: scale(1.1); opacity: 1; }
+    }
+    img { margin: 0; border: 0; width: auto; transition: 0.2s all ease-in; opacity: 0.8; }
+  }
+  .no-image { background: $black-1; width: 180px; height: 180px; opacity: 0.8; border-radius: 100%; }
+  .desc { flex:1; margin-left: 20px;}
+  .title { font-weight: bold; color: $sherpa-blue-color; text-transform: uppercase; font-size: 20px; margin-bottom: 15px; }
+}
+
+.icon { display: block; width: 64px; height: 64px; margin: auto; }
+@media only screen and (max-width:48em) {
+  .key-personnel { text-align: center;
+    .cols { flex-direction: column; }
+    .desc { margin-left: 0; }
+  }
+}

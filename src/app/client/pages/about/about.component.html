@@ -1,0 +1,103 @@
+<bashgo-banner bannerImage="{{bannerImage}}" bannerCaption=""></bashgo-banner>
+<section class="page-content">
+  <section class="block-content">
+    <div class="content-wrapper">
+      <h2 class="header-title"><span>About Us</span></h2>
+      <h3 class="header-title"><span>Management</span></h3>
+      <div class="key-personnel">
+        <div class="row-separator">
+          <div class="cols" *ngFor="let kp of keyPersonnels">
+            <figure class="avator">
+              <span class="no-image" *ngIf="!kp.avator; else thenState">No Image</span>
+              <ng-template #thenState>
+                <img src="{{kp.avator}}" alt="{{kp.name}}" width="180" height="180">
+              </ng-template>
+            </figure>
+            <div class="desc">
+              <div class="title">{{kp.name}}</div>
+              <p>{{kp.description}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="block-content">
+    <div class="content-wrapper">
+      <h2 class="header-title"><span>Vision &amp; Values</span></h2>
+      <h3 class="header-title"><span>Our Vision</span></h3>
+      <p>To be the leading service provider for Industrial services in the India and Abroad.
+        BASHGO has become synonymous with ‘Delivering what we promise’, both to our clients and our people. Our people
+        are our greatest asset and we are continually working to evolve to ensure that the business is a great place for
+        people to work, develop and grow.
+        As part of this on-going commitment we are excited to share our vision and values. Clear, simple and focussed
+        the aim is to make sure that our people and our clients really understand what is driving us and our common
+        goals.</p>
+      <div class="row-separator">
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+          <div class="box box-green with-header-icon">
+            <div class="box-header-icon">
+              <span class="icon icon-people"></span>
+            </div>
+            <h3 class="header-title">People</h3>
+            <p class="caption">Engaging and empowering everyone to deliver and grow</p>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+          <div class="box with-header-icon">
+            <div class="box-header-icon">
+              <span class="icon icon-safety"></span>
+            </div>
+            <h3 class="header-title">Safety</h3>
+            <p class="caption">Putting health, wellbeing and safety of people first</p>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+          <div class="box box-green with-header-icon">
+            <div class="box-header-icon">
+              <span class="icon icon-delivery"></span>
+            </div>
+            <h3 class="header-title">Delivery</h3>
+            <p class="caption">Helping deliver our clients business needs</p>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+          <div class="box with-header-icon">
+            <div class="box-header-icon">
+              <span class="icon icon-integrity"></span>
+            </div>
+            <h3 class="header-title">Integrity</h3>
+            <p class="caption">Conducting ourselves respectfully, being open, accountable and honest in all our
+              operations</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="block-content">
+    <div class="content-wrapper">
+      <h2 class="header-title"><span>QHSE (Quality, Health, Safety & Environment)</span></h2>
+      <h3 class="header-title"><span>Quality</span></h3>
+      <p>Bashgo quality management system is accredited to ISO 9001:2015. This means our company has implemented a
+        quality management system and procedures which will lead to a continual improvement in our ability to meet, and
+        hopefully exceed, our clients quality expectations and requirements. This is demonstrated in the number of
+        repeat and long term clients held by our company.</p>
+      <h3 class="header-title"><span>Health & Safety</span></h3>
+      <p>At Bashgo Health and Safety is paramount. The importance of good health and safety is evident to anyone who has
+        seen the consequences of its failure. We have an experienced and highly qualified HSQE (Health, Safety, Quality
+        & Environment) department dedicated to improving these areas within our business.</p>
+      <p>Our safety record is excellent and is still subject to continuous improvement. Our managers and leaders ensure
+        a ‘safety first’ culture exists at all levels within the company.</p>
+      <p>Regular HSQE meetings are held and attended by all managers highlighting areas requiring additional focus. It
+        is our policy to place Health & Safety as the first item on the agenda at every internal meeting thereby
+        ensuring that it is treated with the priority it deserves.</p>
+      <p>At Bashgo safety is everyone’s responsibility.</p>
+      <h3 class="header-title"><span>Environmental</span></h3>
+      <p>We operate in an industry that has a significant impact on the world around us, so it is essential we do our
+        best to maintain an environmental responsibility, both industrially and individually, and to consult and develop
+        acceptable sustainability practices.</p>
+      <p>From the planning stage through to completion our Environmental Policy is continually adhered to throughout a
+        project’s lifespan.</p>
+    </div>
+  </section>
+</section>

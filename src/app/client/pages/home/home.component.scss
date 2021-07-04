@@ -1,0 +1,16 @@
+@import '../../../../theme/variable';
+
+.maintenance-services {
+  .box { min-height: 200px; }
+  h3 { min-height: 40px; font-size: 16px; line-height: 20px; }
+  p { font-weight: 300; height: 65px; overflow: hidden; text-align: center; }
+}
+
+@media only screen and (max-width:48em) {
+  .flex-col-2 {
+      li { width: 100% }
+  } 
+  .maintenance-services {
+    h3 { min-height: auto; }
+  }
+}
