@@ -9,8 +9,9 @@
     a { color:$white; text-decoration: none; font-weight: 300;
         &:after { background:$white; }
     }
-    .footer-logo { max-width: 135px; height: 94px; display: inline-block; text-decoration: none;
+    .footer-logo, .iso-logo { max-width: 135px; height: 94px; display: inline-block; text-decoration: none;
         &:after { display: none; }
         img { max-width: 100%; height: auto; display: block; }
     }
+    .iso-logo { max-width: 200px; height: 110px;}
 }
