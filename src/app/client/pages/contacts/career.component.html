@@ -1,0 +1,135 @@
+<bashgo-banner bannerImage="{{bannerImage}}" bannerCaption=""></bashgo-banner>
+<div class="page-content">
+  <section class="block-content">
+    <div class="content-wrapper">
+      <h2 class="header-title"><span>BASHGO Careers</span></h2>
+      <h3 class="header-title"><span>Openings</span></h3>
+      <div class="table-container">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Sl.</th>
+              <th class="job-code">Job Code</th>
+              <th class="job-title">Title</th>
+              <th class="job-edu">Education / Qualification</th>
+              <th class="job-exp">Experience in Yrs</th>
+              <th class="job-desc">Job Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <ng-container *ngIf="jobs.length !== 0; else noResults">
+              <tr *ngFor="let job of jobs; let i = index">
+                <td>
+                  {{i+1}}
+                </td>
+                <td class="job-code">
+                  {{job.JobCode}}
+                </td>
+                <td class="job-title">
+                  {{job.Title}}
+                </td>
+                <td class="job-edu">
+                  {{job.Qualification}}
+                </td>
+                <td class="job-exp">
+                  {{job.Experience}}
+                </td>
+                <td class="job-desc" [innerHTML]="job.Description">
+                </td>
+              </tr>
+            </ng-container>
+            <ng-template #noResults>
+              <tr>
+                <td colspan="6" class="text-center">No jobs found.</td>
+              </tr>
+            </ng-template>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+  <section class="block-content">
+    <div class="content-wrapper">
+      <h3 class="header-title"><span>Apply</span></h3>
+      <div class="row-separator">
+        <div class="col-xs-12 col-sm-6 col-md-6">
+          <!--<form [formGroup]="applyForm" (ngSubmit)="onSubmit()">
+            <div class="row-separator">
+              <div class="col-xs-12 col-sm-6 col-md-6">
+                <div class="form-group">
+                  <label for="">Name <span class="required">*</span></label>
+                  <input type="text" class="form-control" formControlName="name"
+                    [ngClass]="{'is-invalid': f.name.touched && f.name.errors}" />
+                  <div *ngIf="f.name.touched && f.name.errors" class="invalid-feedback">
+                    <div *ngIf="f.name.errors.required">Name is required</div>
+                    <div *ngIf="f.name.errors.pattern">Invalid characters</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xs-12 col-sm-6 col-md-6">
+                <div class="form-group">
+                  <label for="">Contact No <span class="required">*</span></label>
+                  <input type="text" class="form-control" formControlName="contactNo"
+                    [ngClass]="{'is-invalid': f.contactNo.touched && f.contactNo.errors}" />
+                  <div *ngIf="f.contactNo.touched && f.contactNo.errors" class="invalid-feedback">
+                    <div *ngIf="f.contactNo.errors.required">Contact No is required</div>
+                    <div *ngIf="f.contactNo.errors.pattern">Contact no is not valid</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xs-12 col-sm-6 col-md-6">
+                <div class="form-group">
+                  <label for="">Email <span class="required">*</span></label>
+                  <input type="text" class="form-control" formControlName="email"
+                    [ngClass]="{'is-invalid': f.email.touched && f.email.errors}" />
+                  <div *ngIf="f.email.touched && f.email.errors" class="invalid-feedback">
+                    <div *ngIf="f.email.errors.required">Eamil is required</div>
+                    <div *ngIf="f.email.errors.pattern">Email is not valid</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xs-12 col-sm-6 col-md-6">
+                <div class="form-group">
+                  <label for="">Current Location <span class="required">*</span></label>
+                  <input type="text" class="form-control" formControlName="location"
+                    [ngClass]="{'is-invalid': f.location.touched && f.location.errors}" />
+                  <div *ngIf="f.location.touched && f.location.errors" class="invalid-feedback">
+                    <div *ngIf="f.location.errors.required">Current Location is required</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xs-12 col-sm-6 col-md-6">
+                <div class="form-group">
+                  <label for="">Job Code <span class="required">*</span></label>
+                  <input type="text" class="form-control" formControlName="jobCode"
+                    [ngClass]="{'is-invalid': f.jobCode.touched && f.jobCode.errors}" />
+                  <div *ngIf="f.jobCode.touched && f.jobCode.errors" class="invalid-feedback">
+                    <div *ngIf="f.jobCode.errors.required">Job Code is required</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xs-12 col-sm-6 col-md-6">
+                <div class="form-group">
+                  <label for="">Resume <span class="required">*</span></label>
+                  <input type="file" class="form-control" accept=".pdf, .doc, .docx, .txt" formControlName="resume"
+                    [ngClass]="{'is-invalid': f.resume.touched && f.resume.errors}" />
+                  <div *ngIf="f.resume.touched && f.resume.errors" class="invalid-feedback">
+                    <div *ngIf="f.resume.errors.required">Upload resume</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xs">
+                <div class="form-group">
+                  <p>* These fields are mandatory</p>
+                  <button class="btn btn-primary" [disabled]="applyForm.invalid">Submit</button>
+                </div>
+              </div>
+            </div>
+          </form>-->
+          <iframe src="https://www.bashgo.com:8003/Career" width="99%" height="550px" frameborder="0" allowfullscreen=""
+            aria-hidden="false" tabindex="0"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
