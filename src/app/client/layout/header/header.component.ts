@@ -56,7 +56,7 @@ export class HeaderComponent implements OnInit {
     this.router.navigate(["/contact-us"]);
     setTimeout(() => {
       let contactID = document.getElementById("contactUs") as HTMLElement;
-      window.scrollTo(0, contactID.offsetTop - 100);
+      window.scrollTo(0, contactID.offsetTop - 135);
     }, 1000);
   }
 

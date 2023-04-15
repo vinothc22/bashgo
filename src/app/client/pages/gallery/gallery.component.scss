@@ -1,7 +1,7 @@
 @import '../../../../theme/variable';
 
 .gallery {
-  display: flex; flex-wrap: wrap; justify-content: center;
+  display: flex; flex-wrap: wrap; justify-content: flex-start;
   li { width: 250px; height: 190px; margin: 0 10px 10px 0; }
   figure { transform: none;
     a { display: block; }
